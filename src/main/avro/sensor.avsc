@@ -1,0 +1,41 @@
+{
+	"namespace": "com.inspur.avro.avsc",
+	"name": "Sensor",
+	"type": "record",
+	"fields": [
+		{
+			"name": "client",
+			"type": ["string", "null"]
+		},
+		{
+			"name": "timestamp",
+			"type": ["long", "null"]
+		},
+		{
+		    "name": "state",
+		    "type": {
+		        "type": "record",
+		        "name": "State",
+		        "fields": [
+		            {
+                        "name": "reported",
+                        "type": {
+                           "type": "record",
+                           "name": "Reported",
+                           "fields":[
+                               {
+                                   "name": "temperature",
+                                   "type": ["double", "null"]
+                               },
+                               {
+                                  "name": "humity",
+                                  "type": ["double", "null"]
+                                }
+                           ]
+                        }
+                    }
+		        ]
+		    }
+		}
+	]
+}

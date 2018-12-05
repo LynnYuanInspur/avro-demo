@@ -1,0 +1,38 @@
+{
+    "namespace": "com.inspur.avro.avsc",
+	"type": "array",
+	"items": {
+	    "namespace": "com.inspur.avro.avsc",
+		"type": "record",
+		"name": "Products",
+		"fields": [{
+				"name": "product_seris",
+				"type": "string"
+			},
+			{
+				"name": "product_name",
+				"type": "string"
+			},
+			{
+				"name": "prices",
+				"type": {
+					"type": "array",
+					"items": {
+					    "namespace": "com.inspur.avro.avsc",
+						"type": "record",
+						"name": "Price",
+						"fields": [{
+								"name": "model",
+								"type": "string"
+							},
+							{
+								"name": "price",
+								"type": "float"
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

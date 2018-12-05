@@ -1,0 +1,15 @@
+@namespace("com.inspur.avro.avsc")
+record Sensor{
+    State state;
+    string client;
+    long timestamp;
+}
+
+record State{
+    Reported reported;
+}
+
+record Reported{
+    double temperature;
+    double humity;
+}
